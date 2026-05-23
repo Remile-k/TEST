@@ -8,26 +8,8 @@
 
   <h1> Pages + JS</h1>
 
-  <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
-  <script>
-    wx.config({
-      debug: true, 
-      appId: "wx21dd00cd1ccac236",
-      timestamp: 1779543175,
-      nonceStr: "K2478HpSs30BU9WI", 
-      signature: "b778509481cfb0c4f6124d6969831b3e48f2d926",
-      jsApiList: ['updateAppMessageShareData', 'getLocation'] 
-    });
-    wx.getLocation({
-      success(res){
-        alert("签名有效，JSAPI 调用成功");
-      },
-      fail(err){
-        alert("签名无效：" + JSON.stringify(err));
-      }
-    });
+  <script src="./XSS.js"></script>
 
-  </script>
   
 </body>
 </html>
