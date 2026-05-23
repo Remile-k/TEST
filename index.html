@@ -8,22 +8,7 @@
 
   <h1> Pages + JS</h1>
 
-  <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
-  <script>
-    wx.config({
-      debug: true, // 开启调试模式
-      appId: 'wx21dd00cd1ccac236',
-      timestamp: '1779517839',
-      nonceStr: 'E8sjPNclRplLi4nv',
-      signature: '2e9cddffacd86aab30b1b17f68af6c48ec0fcb00',
-      jsApiList: ['updateAppMessageShareData', 'getLocation'] // 申请的接口
-    });
-    wx.ready(function(){
-      alert("JSSDK 鉴权成功！漏洞存在。");
-    });
-    wx.error(function(res){
-      alert("鉴权失败: " + JSON.stringify(res));
-    });
-  </script>
+  <script src="./XSS.js"></script>
+  
 </body>
 </html>
