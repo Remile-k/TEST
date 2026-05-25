@@ -8,7 +8,29 @@
 
   <h1> Pages + JS</h1>
 
-  <script src="./XSS.js"></script>
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+  <script>
+    wx.config({
+      debug: true, // 开启调试模式
+      appId: '从接口获取的appId',
+      timestamp: '从接口获取的timestamp',
+      nonceStr: '从接口获取的nonceStr',
+      signature: '从接口获取的signature',
+      jsApiList: ['updateAppMessageShareData', 'getLocation'] // 申请的接口
+    });
+    wx.getLocation({
+      success(res){
+        alert("签名有效，JSAPI 调用成功");
+      },
+      fail(err){
+        alert("签名无效：" + JSON.stringify(err));
+      }
+    });
+  
+    wx.error(function(res){
+      alert("鉴权失败: " + JSON.stringify(res));
+    });
+  </script>
 
   
 </body>
